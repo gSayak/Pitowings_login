@@ -1,6 +1,6 @@
 import React from "react";
 import mailsvg from "../../assets/mail.svg";
-import Timer from "./components/Timer";
+import OtpSection from "./components/OtpSection";
 
 const ForgetPassword: React.FC = () => {
     const [email, setEmail] = React.useState<string>('');
@@ -15,7 +15,7 @@ const ForgetPassword: React.FC = () => {
     };
 
     return (
-        <div className="flex flex-col justify-center items-center h-screen">
+        <div className="flex flex-col justify-center items-center h-[85vh]">
             <div className="bg-bggray rounded-xl flex flex-col gap-y-5 w-full lg:w-1/2 p-10">
                 <div className="flex flex-col justify-center items-center">
                     <div className="flex gap-y-3 flex-col items-center">
@@ -39,7 +39,7 @@ const ForgetPassword: React.FC = () => {
                             />
                         </div>
                     </div>
-                    {showOtp ? <Timer minutes={2} setShow={setShowOtp} /> :
+                    {showOtp ? <OtpSection minutes={2} setShow={setShowOtp} /> :
                         <div className="flex justify-center">
                             <button onClick={handleClick} className="bg-buttonbg w-2/3 p-3 rounded-2xl text-black font-semibold">Send Reset Link</button>
                         </div>

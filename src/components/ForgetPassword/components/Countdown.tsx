@@ -3,9 +3,10 @@ import React, { useEffect, useState } from 'react'
 interface CountdownProps {
     minutes?: number;
     seconds?: number;
+    setShow: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const Countdown: React.FC<CountdownProps> = ({ minutes = 0, seconds = 0 }: CountdownProps) => {
+const Countdown: React.FC<CountdownProps> = ({ minutes = 0, seconds = 0, setShow }: CountdownProps) => {
     const [min, setMinutes] = useState(minutes);
     const [sec, setSeconds] = useState(seconds);
 
@@ -16,6 +17,7 @@ const Countdown: React.FC<CountdownProps> = ({ minutes = 0, seconds = 0 }: Count
             }
             if (sec === 0) {
                 if (min === 0) {
+                    setShow(false);
                     clearInterval(TimeInterval)
                 } else {
                     setMinutes(min - 1);

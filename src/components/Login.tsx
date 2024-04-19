@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 interface LoginProps {
   className?: string;
 }
+
 
 const Login: React.FC<LoginProps> = ({ className }) => {
   const [email, setEmail] = useState("");
@@ -10,15 +12,26 @@ const Login: React.FC<LoginProps> = ({ className }) => {
   const [rememberMe, setRememberMe] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Email:", email);
-    console.log("Password:", password);
-    console.log("Remember Me:", rememberMe);
+    const response = await fetch('http://localhost:5000/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password }),
+    });
+  
+    const data = await response.text();
+    console.log(data);
+
+    if(response.ok){
+      navigate('/home');
+    }
   };
   const toggleShowPassword = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
   };
+
+  const navigate = useNavigate();
 
   return (
     <div

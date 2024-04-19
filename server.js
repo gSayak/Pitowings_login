@@ -2,8 +2,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const jwt = require('jsonwebtoken')
 // const bcrypt = require('bcrypt');
 require("dotenv").config();
+
 
 const app = express();
 
@@ -17,31 +19,25 @@ mongoose.connect(process.env.MONGODB_URI, {
 const userSchema = new mongoose.Schema({
   email: String,
   password: String,
+  name: String,
 });
 
 const User = mongoose.model("user_details", userSchema);
 
-// app.post('/login', async (req, res) => {
-//   const user = await User.findOne({ email: req.body.email });
-//   if (!user) return res.status(400).send('Username not found');
-
-//   const validPassword = await bcrypt.compare(req.body.password, user.password);
-//   if (!validPassword) return res.status(400).send('Invalid password');
-
-//   res.send('Logged in successfully');
-// });
-
 app.post("/login", async (req, res) => {
-  console.log(req.body.email);
+  // console.log(req.body.email);
   const user = await User.findOne({ email: req.body.email });
-  console.log(user);
+  // console.log(user);
+  // console.log(user.name)
   // console.log(req.body.user);
   if (!user) return res.status(400).send("Email not found");
 
   if (req.body.password !== user.password)
     return res.status(400).send("Invalid password");
 
-  res.send("Logged in successfully");
+    const token = jwt.sign({ id: user._id, name: user.name }, process.env.SECRET_TOKEN);
+    // console.log(user.name)
+  res.json({ accessToken : token });
 });
 
 app.post('/signup', async (req, res) => {
@@ -58,6 +54,24 @@ app.post('/signup', async (req, res) => {
     res.status(500).send('Error registering user');
   }
 });
+
+app.get('/home', authenticateToken, (req, res) => {
+  res.send(`Hello, user ${req.user.name}`);
+});
+
+function authenticateToken(req, res, next){
+  const authHeader = req.headers['authorization']
+  const token = authHeader && authHeader.split(' ')[1]
+  if (token == null ) return res.sendStatus(401)
+
+  jwt.verify(token, process.env.SECRET_TOKEN, (err, user) =>{
+    if (err) return res.sendStatus(403)
+    req.user = user
+    console.log(user)
+    next()
+  })
+}
+
 
 
 app.listen(5000, () => console.log("Server running on port 5000"));

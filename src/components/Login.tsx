@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
 interface LoginProps {
   className?: string;
 }
-
 
 const Login: React.FC<LoginProps> = ({ className }) => {
   const [email, setEmail] = useState("");
@@ -14,17 +14,17 @@ const Login: React.FC<LoginProps> = ({ className }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:5000/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    const response = await fetch("http://localhost:5000/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
     });
-  
+
     const data = await response.text();
     console.log(data);
 
-    if(response.ok){
-      navigate('/home');
+    if (response.ok) {
+      navigate("/home");
     }
   };
   const toggleShowPassword = () => {
@@ -89,17 +89,9 @@ const Login: React.FC<LoginProps> = ({ className }) => {
                 onClick={toggleShowPassword}
               >
                 {showPassword ? (
-                  <img
-                    src="/svgs/showIcon.svg"
-                    alt="Hide Icon"
-                    className="h-5 w-5"
-                  />
+                  <AiOutlineEye fontSize={18} fill="#AFB2BF" />
                 ) : (
-                  <img
-                    src="/svgs/hideIcon.svg"
-                    alt="Hide Icon"
-                    className="h-5 w-5"
-                  />
+                  <AiOutlineEyeInvisible fontSize={18} fill="#AFB2BF" />
                 )}
               </button>
             </div>

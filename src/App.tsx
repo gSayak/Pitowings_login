@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NewUser from './components/newUser/NewUser';
 import ForgetPassword from './components/ForgetPassword/ForgetPassword';
 import Home from './components/Home';
+import PrivateRoute from './utils/PrivateRoutes';
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/signup" element={<NewUser/>} />
           <Route path="/forgot" element={<ForgetPassword />} />
-          <Route path='/home' element={<Home />} />
+          <Route element={<PrivateRoute/>}>
+            <Route element={<Home/>} path='/home'/>
+          </Route>
         </Routes>
       </Router>
     </div>

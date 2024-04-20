@@ -19,12 +19,14 @@ const Login: React.FC<LoginProps> = ({ className }) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
     });
-
-    const data = await response.text();
-    console.log(data);
-
     if (response.ok) {
-      navigate("/home");
+      const data = await response.json();
+      // console.log(data);
+      localStorage.setItem('token', data.token);
+      navigate('/home')
+    } else {
+      const text = await response.text();
+      console.log(text);
     }
   };
   const toggleShowPassword = () => {

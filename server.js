@@ -37,7 +37,8 @@ app.post("/login", async (req, res) => {
 
     const token = jwt.sign({ id: user._id, name: user.name }, process.env.SECRET_TOKEN);
     // console.log(user.name)
-  res.json({ accessToken : token });
+
+  res.send({ token });
 });
 
 app.post('/signup', async (req, res) => {
@@ -55,9 +56,13 @@ app.post('/signup', async (req, res) => {
   }
 });
 
-app.get('/home', authenticateToken, (req, res) => {
-  res.send(`Hello, user ${req.user.name}`);
-});
+// app.get('/home', authenticateToken, (req, res) => {
+//   res.send(`Hello, user ${req.user.name}`);
+// });
+
+app.post('/verify', authenticateToken, (req, res)=> {
+  res.send(true)
+})
 
 function authenticateToken(req, res, next){
   const authHeader = req.headers['authorization']

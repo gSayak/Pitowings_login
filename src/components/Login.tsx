@@ -24,12 +24,12 @@ const Login: React.FC<LoginProps> = ({ className }) => {
     <div
       className={`flex items-center justify-center h-screen bg-gray-100 ${className}`}
     >
-      <div className="absolute top-4 right-4">
+      <div className="absolute top-8 right-4">
         <p className="text-[#3c3a3b] font-medium">
           Don't have an account?
           <a
             href="/signup"
-            className="text-[#3c3a3b] hover:text-[#B8065E] font-medium"
+            className="text-[#3c3a3b] pl-3 hover:text-[#B8065E] font-medium"
           >
             Sign Up
           </a>

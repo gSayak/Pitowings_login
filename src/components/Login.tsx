@@ -36,7 +36,7 @@ const Login: React.FC<LoginProps> = ({ className }) => {
 
   return (
     <div
-      className={`flex items-center justify-center h-screen bg-gray-100 ${className}`}
+      className={`flex items-center justify-center h-[87vh] bg-gray-100 ${className}`}
     >
       <div className="absolute top-8 right-4">
         <p className="text-[#3c3a3b] font-medium">

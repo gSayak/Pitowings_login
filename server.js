@@ -24,12 +24,10 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("user_details", userSchema);
 
+//Login Code
+
 app.post("/login", async (req, res) => {
-  // console.log(req.body.email);
   const user = await User.findOne({ email: req.body.email });
-  // console.log(user);
-  // console.log(user.name)
-  // console.log(req.body.user);
   if (!user) return res.status(400).send("Email not found");
 
   if (req.body.password !== user.password)
@@ -40,6 +38,8 @@ app.post("/login", async (req, res) => {
 
   res.send({ token });
 });
+
+//SignUp Code
 
 app.post('/signup', async (req, res) => {
   const user = new User({
@@ -56,12 +56,11 @@ app.post('/signup', async (req, res) => {
   }
 });
 
-// app.get('/home', authenticateToken, (req, res) => {
-//   res.send(`Hello, user ${req.user.name}`);
-// });
 
-app.post('/verify', authenticateToken, (req, res)=> {
-  res.send(true)
+//Verification Codes for Authenticating JWT
+
+app.get('/verify', authenticateToken, (req, res)=> {
+  res.send({"name" : req.user.name})
 })
 
 function authenticateToken(req, res, next){
@@ -71,9 +70,12 @@ function authenticateToken(req, res, next){
 
   jwt.verify(token, process.env.SECRET_TOKEN, (err, user) =>{
     if (err) return res.sendStatus(403)
+    if (user && user.name){
     req.user = user
-    console.log(user)
     next()
+  }else{
+    res.sendStatus(403)
+  }
   })
 }
 

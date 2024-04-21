@@ -21,7 +21,6 @@ const Login: React.FC<LoginProps> = ({ className }) => {
     });
     if (response.ok) {
       const data = await response.json();
-      // console.log(data);
       localStorage.setItem('token', data.token);
       navigate('/home')
     } else {

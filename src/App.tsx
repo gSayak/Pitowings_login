@@ -16,10 +16,10 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route path="/signup" element={<NewUser />} />
             <Route path="/forgot" element={<ForgetPassword />} />
-            <Route element={<PrivateRoute/>}>
-            <Route element={<Home/>} path='/home'/>
-          </Route>
-        </Routes>
+            <Route element={<PrivateRoute />}>
+              <Route element={<Home />} path='/home' />
+            </Route>
+          </Routes>
         </Router>
       </div>
     </Layout>

@@ -6,7 +6,8 @@
     "remember": "Recuérdame",
     "forgot_password": "¿Olvidaste tu contraseña?",
     "question": "¿No tienes una cuenta?",
-    "signup": "Regístrate"
+    "signup": "Regístrate",
+    "login_btn": "INICIAR SESIÓN"
   },
   "new user": {
     "newUser": "Nuevo usuario",

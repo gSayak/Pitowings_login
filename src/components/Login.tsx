@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { api, endpoints } from "../url.config";
+import { useTranslation } from "react-i18next";
 
 interface LoginProps {
   className?: string;
@@ -12,6 +13,8 @@ const Login: React.FC<LoginProps> = ({ className }) => {
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+
+  const { t } = useTranslation();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -40,17 +43,17 @@ const Login: React.FC<LoginProps> = ({ className }) => {
     >
       <div className="absolute top-8 right-4 lg:right-56">
         <p className="text-[#3c3a3b] font-medium">
-          Don't have an account?
+          {t('login.question')}
           <a
             href="/signup"
             className="text-[#3c3a3b] pl-3 hover:text-[#B8065E] font-medium"
           >
-            Sign Up
+            {t('login.signup')}
           </a>
         </p>
       </div>
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md relative">
-        <h2 className="text-2xl font-bold mb-4 text-center">Welcome Back</h2>
+        <h2 className="text-2xl font-bold mb-4 text-center">{t('login.welcome')}</h2>
 
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
@@ -58,7 +61,7 @@ const Login: React.FC<LoginProps> = ({ className }) => {
               htmlFor="email"
               className="block text-gray-700 font-medium mb-2"
             >
-              Email Address
+              {t('login.email')}
             </label>
             <input
               type="email"
@@ -74,7 +77,7 @@ const Login: React.FC<LoginProps> = ({ className }) => {
               htmlFor="password"
               className="block text-gray-700 font-medium mb-2"
             >
-              Password
+              {t('login.password')}
             </label>
             <div className="relative">
               <input
@@ -107,11 +110,11 @@ const Login: React.FC<LoginProps> = ({ className }) => {
                 onChange={(e) => setRememberMe(e.target.checked)}
               />
               <label htmlFor="rememberMe" className="text-gray-700">
-                Remember Me
+              {t('login.remember')}
               </label>
             </div>
             <a href="/forgot" className="text-blue-500 hover:text-blue-700">
-              Forgot your password?
+            {t('login.forgot_password')}
             </a>
           </div>
 
@@ -119,7 +122,7 @@ const Login: React.FC<LoginProps> = ({ className }) => {
             type="submit"
             className="w-full bg-button-bg font-semibold hover:bg-button-hoverbg text-white py-2 px-4 rounded-lg focus:outline-none"
           >
-            LOGIN
+            {t('login.login_btn')}
           </button>
         </form>
       </div>

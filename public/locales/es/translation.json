@@ -1,38 +1,38 @@
 {
-    "login": {
-        "welcome": "Bienvenido de nuevo",
-        "email": "Dirección de correo electrónico",
-        "password": "Contraseña",
-        "remember": "Recuérdame",
-        "forgot_password": "¿Olvidaste tu contraseña?",
-        "question": "¿No tienes una cuenta?",
-        "signup": "Regístrate"
-    },
-    "new user": {
-        "newUser": "Nuevo usuario",
-        "personal": "Detalles personales",
-        "first": "Nombre",
-        "last": "Apellido",
-        "email": "Correo electrónico",
-        "phone": "Número de teléfono",
-        "company_det": "Detalles de la empresa",
-        "company_name": "Nombre de la empresa",
-        "job_title": "Título del trabajo",
-        "security": "Seguridad",
-        "password": "Contraseña",
-        "tnc": "Aceptar los términos y condiciones del servicio",
-        "cancel": "CANCELAR",
-        "register": "REGISTRARSE",
-        "confirm_pw": "Confirmar contraseña"
-    },
-    "forget password": {
-        "forget": "Olvidar contraseña",
-        "forget_text": "Ingrese su dirección de correo electrónico y le enviaremos un enlace para restablecer su contraseña.",
-        "email": "Correo electrónico",
-        "reset_text": "Enviar enlace de restablecimiento",
-        "sent_text": "Le hemos enviado una contraseña de un solo uso a su correo electrónico",
-        "request_otp": "Ingrese OTP",
-        "resend": "Reenviar OTP",
-        "verify": "Verificar OTP"
-    }
+  "login": {
+    "welcome": "Bienvenido de nuevo",
+    "email": "Dirección de correo electrónico",
+    "password": "Contraseña",
+    "remember": "Recuérdame",
+    "forgot_password": "¿Olvidaste tu contraseña?",
+    "question": "¿No tienes una cuenta?",
+    "signup": "Regístrate"
+  },
+  "new user": {
+    "newUser": "Nuevo usuario",
+    "personal": "Detalles personales",
+    "first": "Nombre",
+    "last": "Apellido",
+    "email": "Correo electrónico",
+    "phone": "Número de teléfono",
+    "company_det": "Detalles de la empresa",
+    "company_name": "Nombre de la empresa",
+    "job_title": "Título del trabajo",
+    "security": "Seguridad",
+    "password": "Contraseña",
+    "tnc": "Aceptar los términos y condiciones del servicio",
+    "cancel": "CANCELAR",
+    "register": "REGISTRARSE",
+    "confirm_pw": "Confirmar contraseña"
+  },
+  "forget password": {
+    "forget": "Olvidar contraseña",
+    "forget_text": "Ingrese su dirección de correo electrónico y le enviaremos un enlace para restablecer su contraseña.",
+    "email": "Correo electrónico",
+    "reset_text": "Enviar enlace de restablecimiento",
+    "sent_text": "Le hemos enviado una contraseña de un solo uso a su correo electrónico",
+    "request_otp": "Ingrese OTP",
+    "resend": "Reenviar OTP",
+    "verify": "Verificar OTP"
+  }
 }

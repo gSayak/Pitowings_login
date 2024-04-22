@@ -1,10 +1,13 @@
 import React from "react";
 import mailsvg from "../../assets/mail.svg";
 import OtpSection from "./components/OtpSection";
+import { useTranslation } from "react-i18next";
 
 const ForgetPassword: React.FC = () => {
     const [email, setEmail] = React.useState<string>('');
     const [showOtp, setShowOtp] = React.useState<boolean>(false);
+
+    const { t } = useTranslation();
 
     const handleClick = () => {
         if (email === '') {
@@ -19,10 +22,11 @@ const ForgetPassword: React.FC = () => {
             <div className="bg-bggray rounded-xl flex flex-col gap-y-5 w-full lg:w-1/2 p-10">
                 <div className="flex flex-col justify-center items-center">
                     <div className="flex gap-y-3 flex-col items-center">
-                        <h1 className="text-3xl lg:text-4xl font-bold">Forget Password</h1>
+                        <h1 className="text-3xl lg:text-4xl font-bold">{t('forget password.forget')}</h1>
                         <p className="text-sm text-black w-2/3 text-center font-semibold">
-                            Enter your email address and we'll send you a link to reset your
-                            password.
+                            {/* Enter your email address and we'll send you a link to reset your
+                            password. */}
+                            {t('forget password.forget_text')}
                         </p>
                         <div>
                             <img src={mailsvg} alt="hello" />
@@ -31,7 +35,7 @@ const ForgetPassword: React.FC = () => {
                 </div>
                 <div className={`flex flex-col gap-y-5 ${showOtp ? "lg:gap-y-5" : "lg:gap-y-12"}`}>
                     <div>
-                        <label className="text-black" htmlFor="email" >Email</label>
+                        <label className="text-black" htmlFor="email" >{t('forget password.email')}</label>
                         <div className="my-2 w-full">
                             <input type="email" name="email"
                                 className="w-full p-3 rounded-2xl text-black bg-[#EBEBEB] outline-none"
@@ -41,7 +45,7 @@ const ForgetPassword: React.FC = () => {
                     </div>
                     {showOtp ? <OtpSection minutes={2} setShow={setShowOtp} /> :
                         <div className="flex justify-center">
-                            <button onClick={handleClick} className="bg-button-bg w-2/3 p-3 rounded-2xl text-white font-semibold">Send Reset Link</button>
+                            <button onClick={handleClick} className="bg-button-bg w-2/3 p-3 rounded-2xl text-white font-semibold">{t('forget password.reset_text')}</button>
                         </div>
                     }
                 </div>

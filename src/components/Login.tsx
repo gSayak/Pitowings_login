@@ -16,11 +16,11 @@ const Login: React.FC<LoginProps> = ({ className }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await api.post(endpoints.login , { email, password });
+      const response = await api.post(endpoints.login, { email, password });
       const data = response.data;
       localStorage.setItem('token', data.token);
       navigate('/home');
-    } catch (error : any) {
+    } catch (error: any) {
       if (error.response) {
         console.log(error.response.data);
       } else {
@@ -38,7 +38,7 @@ const Login: React.FC<LoginProps> = ({ className }) => {
     <div
       className={`flex items-center justify-center h-[87vh] bg-gray-100 ${className}`}
     >
-      <div className="absolute top-8 right-4">
+      <div className="absolute top-8 right-4 lg:right-56">
         <p className="text-[#3c3a3b] font-medium">
           Don't have an account?
           <a

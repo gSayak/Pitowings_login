@@ -5,7 +5,15 @@ module.exports = {
     extend: {
       colors: {
         bggray: "#F9F9F9",
-        buttonbg: "#AEAEAE",
+        button: {
+          bg: "#A80062",
+          hoverbg: "#B8065E",
+          focusring: "#D80D77",
+          gray: "#ECECEC",
+        },
+        input: {
+          border: "#EBEBEB",
+        },
       },
     },
   },

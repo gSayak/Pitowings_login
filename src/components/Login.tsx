@@ -117,7 +117,7 @@ const Login: React.FC<LoginProps> = ({ className }) => {
 
           <button
             type="submit"
-            className="w-full bg-[#A80062] hover:bg-[#B8065E] text-white font-medium py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#D80D77] focus:ring-offset-2"
+            className="w-full bg-button-bg font-semibold hover:bg-button-hoverbg text-white py-2 px-4 rounded-lg focus:outline-none"
           >
             LOGIN
           </button>

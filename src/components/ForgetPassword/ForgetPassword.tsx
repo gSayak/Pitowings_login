@@ -41,7 +41,7 @@ const ForgetPassword: React.FC = () => {
                     </div>
                     {showOtp ? <OtpSection minutes={2} setShow={setShowOtp} /> :
                         <div className="flex justify-center">
-                            <button onClick={handleClick} className="bg-buttonbg w-2/3 p-3 rounded-2xl text-black font-semibold">Send Reset Link</button>
+                            <button onClick={handleClick} className="bg-button-bg w-2/3 p-3 rounded-2xl text-white font-semibold">Send Reset Link</button>
                         </div>
                     }
                 </div>

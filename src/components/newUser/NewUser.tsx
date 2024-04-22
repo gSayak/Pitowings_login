@@ -76,7 +76,7 @@ const NewUser = () => {
                                         background: "rgba(235, 235, 235, 1)"
 
                                     }}
-                                    className='px-10 rounded-lg border border-[#EBEBEB] py-1  '
+                                    className='px-10 rounded-lg border border-inputborder py-1  '
                                 />
                             </label>
                             <label className='space-y-3'>
@@ -94,7 +94,7 @@ const NewUser = () => {
                                         background: "rgba(235, 235, 235, 1)"
 
                                     }}
-                                    className='px-10 rounded-lg border border-[#EBEBEB] py-1  '
+                                    className='px-10 rounded-lg border border-inputborder py-1  '
                                 />
                             </label>
                         </div>
@@ -114,7 +114,7 @@ const NewUser = () => {
                                         background: "rgba(235, 235, 235, 1)"
 
                                     }}
-                                    className='px-10 rounded-lg border border-[#EBEBEB] py-1  '
+                                    className='px-10 rounded-lg border border-inputborder py-1  '
                                 />
 
 
@@ -134,7 +134,7 @@ const NewUser = () => {
                                         background: "rgba(235, 235, 235, 1)"
 
                                     }}
-                                    className='px-10 rounded-lg border border-[#EBEBEB] py-1  '
+                                    className='px-10 rounded-lg border border-inputborder py-1  '
                                 />
 
                             </label>
@@ -158,7 +158,7 @@ const NewUser = () => {
                                         background: "rgba(235, 235, 235, 1)"
 
                                     }}
-                                    className='px-10 rounded-lg border border-[#EBEBEB] py-1  '
+                                    className='px-10 rounded-lg border border-inputborder py-1  '
                                 />
                             </label>
                             <label className='space-y-3'>
@@ -176,7 +176,7 @@ const NewUser = () => {
                                         background: "rgba(235, 235, 235, 1)"
 
                                     }}
-                                    className='px-10 rounded-lg border border-[#EBEBEB] py-1  '
+                                    className='px-10 rounded-lg border border-inputborder py-1  '
                                 />
                             </label>
                         </div>
@@ -199,7 +199,7 @@ const NewUser = () => {
                                         background: "rgba(235, 235, 235, 1)"
 
                                     }}
-                                    className='px-10 rounded-lg border border-[#EBEBEB] py-1  '
+                                    className='px-10 rounded-lg border border-inputborder py-1  '
                                 />
                                 <span onClick={() => setShowPassword((prev) => !prev)}
                                     className=' absolute right-3    top-6  md:right-3 md:top-[22px] md:z-[10]
@@ -229,7 +229,7 @@ const NewUser = () => {
                                         background: "rgba(235, 235, 235, 1)"
 
                                     }}
-                                    className='px-10 rounded-lg border border-[#EBEBEB] py-1  '
+                                    className='px-10 rounded-lg border border-inputborder py-1  '
                                 />
                                 <span onClick={() => setShowConfirmPassword((prev) => !prev)}
                                     className=' absolute right-3 top-6  md:right-3 md:top-[22px] md:z-[10] cursor-pointer'
@@ -257,16 +257,14 @@ const NewUser = () => {
                     </div>
                     <div className=' flex flex-row space-y-3 items-center  mb-3 space-x-3   md:space-x-5 md:items-end md:-mx-36   md:justify-end   md:space-y-4'>
                         <p
-                            className=' px-7 py-3 font-semibold     md:px-12 md:py-4 md:font-bold  rounded-lg  cursor-pointer'
+                            className=' px-7 py-3 font-semibold  bg-button-gray   md:px-12 md:py-4 md:font-bold  rounded-lg  cursor-pointer'
                         >
                             CANCEL
                         </p>
                         <button
                             type="submit"
-                            className=' px-7 py-3 font-semibold  md:px-12 md:py-4 md:font-bold  rounded-lg '
-                            style={{
-                                background: "rgba(174, 174, 174, 1)"
-                            }}>
+                            className=' px-7 py-3 font-semibold text-white md:px-12 md:py-4 md:font-bold rounded-lg bg-button-bg'
+                        >
                             REGISTER
                         </button>
                     </div>

@@ -15,7 +15,6 @@ interface otpSectionProps {
 }
 
 const OtpSection: React.FC<otpSectionProps> = ({ minutes, seconds, setShow }: otpSectionProps) => {
-    // State to manage OTP input
     const [otp, setOtp] = React.useState(['', '', '', '']);
 
     /**
@@ -71,9 +70,9 @@ const OtpSection: React.FC<otpSectionProps> = ({ minutes, seconds, setShow }: ot
                 }
             </div>
             <div className='flex mt-5 lg:mt-10 justify-center gap-x-5'>
-                <button className='bg-[#ECECEC] w-1/2 p-3 rounded-2xl text-black font-semibold'>Resend OTP</button>
+                <button className='bg-button-gray w-1/2 p-3 rounded-2xl text-black font-semibold'>Resend OTP</button>
                 {/* Button to verify OTP */}
-                <button className='bg-buttonbg w-1/2 p-3 rounded-2xl text-black font-semibold' onClick={handleVerifyOTP}>Verify OTP</button>
+                <button className='bg-button-bg w-1/2 p-3 rounded-2xl text-white font-semibold' onClick={handleVerifyOTP}>Verify OTP</button>
             </div>
         </div>
     );

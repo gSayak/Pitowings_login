@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { api, endpoints } from "../url.config";
 
 interface LoginProps {
   className?: string;
@@ -14,18 +15,17 @@ const Login: React.FC<LoginProps> = ({ className }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    });
-    if (response.ok) {
-      const data = await response.json();
+    try {
+      const response = await api.post(endpoints.login , { email, password });
+      const data = response.data;
       localStorage.setItem('token', data.token);
-      navigate('/home')
-    } else {
-      const text = await response.text();
-      console.log(text);
+      navigate('/home');
+    } catch (error : any) {
+      if (error.response) {
+        console.log(error.response.data);
+      } else {
+        console.log(error.message);
+      }
     }
   };
   const toggleShowPassword = () => {

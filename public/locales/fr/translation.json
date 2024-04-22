@@ -1,0 +1,38 @@
+{
+    "login": {
+        "welcome": "Bienvenue de retour",
+        "email": "Adresse e-mail",
+        "password": "Mot de passe",
+        "remember": "Se souvenir de moi",
+        "forgot_password": "Mot de passe oublié?",
+        "question": "Vous n'avez pas de compte?",
+        "signup": "S'inscrire"
+    },
+    "new user": {
+        "newUser": "Nouvel utilisateur",
+        "personal": "Détails personnels",
+        "first": "Prénom",
+        "last": "Nom de famille",
+        "email": "Email",
+        "phone": "Numéro de téléphone",
+        "company_det": "Détails de l'entreprise",
+        "company_name": "Nom de l'entreprise",
+        "job_title": "Titre du poste",
+        "security": "Sécurité",
+        "password": "Mot de passe",
+        "tnc": "Accepter les conditions générales d'utilisation",
+        "cancel": "ANNULER",
+        "register": "S'INSCRIRE",
+        "confirm_pw": "Confirmer le mot de passe"
+    },
+    "forget password": {
+        "forget": "Mot de passe oublié",
+        "forget_text": "Entrez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+        "email": "Email",
+        "reset_text": "Envoyer le lien de réinitialisation",
+        "sent_text": "Nous vous avons envoyé un mot de passe à usage unique à votre adresse e-mail",
+        "request_otp": "Veuillez saisir OTP",
+        "resend": "Renvoyer OTP",
+        "verify": "Vérifier OTP"
+    }
+}

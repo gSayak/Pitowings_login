@@ -3,12 +3,13 @@ import Login from './components/Login';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NewUser from './components/newUser/NewUser';
 import ForgetPassword from './components/ForgetPassword/ForgetPassword';
-import Layout from './Layout';
+import Navbar from './components/newUser/Navbar';
 
 function App() {
   return (
-    <Layout>
+    
       <div className="App">
+        <Navbar/>
         <Router>
           <Routes>
             <Route path="/" element={<Login />} />
@@ -17,7 +18,7 @@ function App() {
           </Routes>
         </Router>
       </div>
-    </Layout>
+    
   );
 }
 

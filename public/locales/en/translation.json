@@ -7,33 +7,33 @@
     "forgot_password": "Forgot your password?",
     "question": "Don't have an account?",
     "signup": "Sign Up",
-    "login_btn" : "LOGIN"
+    "login_btn": "LOGIN"
   },
-  "new user": {
-    "newUser": "New User",
-    "personal": "Personal Details",
-    "first": "First Name",
-    "last": "Last Name",
+  "new_user": {
+    "title": "New User",
+    "personal_details": "Personal Details",
+    "first_name": "First Name",
+    "last_name": "Last Name",
     "email": "Email",
-    "phone": "Phone Number",
-    "company_det": "Company Details",
+    "phone_number": "Phone Number",
+    "company_details": "Company Details",
     "company_name": "Company Name",
     "job_title": "Job Title",
     "security": "Security",
-    "pasword": "Password",
-    "tnc": "Accept the terms and conditions of service",
+    "password": "Password",
+    "terms_and_conditions": "Accept the terms and conditions of service",
     "cancel": "CANCEL",
     "register": "REGISTER",
-    "confirm_pw": "Confirm Password"
+    "confirm_password": "Confirm Password"
   },
-  "forget password": {
-    "forget": "Forget Password",
-    "forget_text": "Enter your email address and we'll send you a link to reset your password.",
+  "forgot_password": {
+    "title": "Forgot Password",
+    "description": "Enter your email address and we'll send you a link to reset your password.",
     "email": "Email",
-    "reset_text": "Send Reset Link",
-    "sent_text": "We have sent you One Time Password to your email",
-    "request_otp": "Please Enter OTP",
-    "resend": "Resend OTP",
-    "verify": "Verify OTP"
+    "reset_link_btn": "Send Reset Link",
+    "otp_sent_msg": "We have sent you One Time Password to your email",
+    "otp_request_prompt": "Please Enter OTP",
+    "resend_otp_btn": "Resend OTP",
+    "verify_otp_btn": "Verify OTP"
   }
 }

@@ -9,31 +9,31 @@
     "signup": "Regístrate",
     "login_btn": "INICIAR SESIÓN"
   },
-  "new user": {
-    "newUser": "Nuevo usuario",
-    "personal": "Detalles personales",
-    "first": "Nombre",
-    "last": "Apellido",
+  "new_user": {
+    "title": "Nuevo usuario",
+    "personal_details": "Detalles personales",
+    "first_name": "Nombre",
+    "last_name": "Apellido",
     "email": "Correo electrónico",
-    "phone": "Número de teléfono",
-    "company_det": "Detalles de la empresa",
+    "phone_number": "Número de teléfono",
+    "company_details": "Detalles de la empresa",
     "company_name": "Nombre de la empresa",
     "job_title": "Título del trabajo",
     "security": "Seguridad",
     "password": "Contraseña",
-    "tnc": "Aceptar los términos y condiciones del servicio",
+    "terms_and_conditions": "Aceptar los términos y condiciones del servicio",
     "cancel": "CANCELAR",
     "register": "REGISTRARSE",
-    "confirm_pw": "Confirmar contraseña"
+    "confirm_password": "Confirmar contraseña"
   },
-  "forget password": {
-    "forget": "Olvidar contraseña",
-    "forget_text": "Ingrese su dirección de correo electrónico y le enviaremos un enlace para restablecer su contraseña.",
+  "forgot_password": {
+    "title": "Olvidar contraseña",
+    "description": "Ingrese su dirección de correo electrónico y le enviaremos un enlace para restablecer su contraseña.",
     "email": "Correo electrónico",
-    "reset_text": "Enviar enlace de restablecimiento",
-    "sent_text": "Le hemos enviado una contraseña de un solo uso a su correo electrónico",
-    "request_otp": "Ingrese OTP",
-    "resend": "Reenviar OTP",
-    "verify": "Verificar OTP"
+    "reset_link_btn": "Enviar enlace de restablecimiento",
+    "otp_sent_msg": "Le hemos enviado una contraseña de un solo uso a su correo electrónico",
+    "otp_request_prompt": "Ingrese OTP",
+    "resend_otp_btn": "Reenviar OTP",
+    "verify_otp_btn": "Verificar OTP"
   }
 }

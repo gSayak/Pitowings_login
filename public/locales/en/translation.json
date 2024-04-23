@@ -1,0 +1,39 @@
+{
+  "login": {
+    "welcome": "Welcome Back",
+    "email": "Email Address",
+    "password": "Password",
+    "remember": "Remember Me",
+    "forgot_password": "Forgot your password?",
+    "question": "Don't have an account?",
+    "signup": "Sign Up",
+    "login_btn": "LOGIN"
+  },
+  "new_user": {
+    "title": "New User",
+    "personal_details": "Personal Details",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "email": "Email",
+    "phone_number": "Phone Number",
+    "company_details": "Company Details",
+    "company_name": "Company Name",
+    "job_title": "Job Title",
+    "security": "Security",
+    "password": "Password",
+    "terms_and_conditions": "Accept the terms and conditions of service",
+    "cancel": "CANCEL",
+    "register": "REGISTER",
+    "confirm_password": "Confirm Password"
+  },
+  "forgot_password": {
+    "title": "Forgot Password",
+    "description": "Enter your email address and we'll send you a link to reset your password.",
+    "email": "Email",
+    "reset_link_btn": "Send Reset Link",
+    "otp_sent_msg": "We have sent you One Time Password to your email",
+    "otp_request_prompt": "Please Enter OTP",
+    "resend_otp_btn": "Resend OTP",
+    "verify_otp_btn": "Verify OTP"
+  }
+}

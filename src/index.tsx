@@ -4,14 +4,17 @@ import './index.css';
 import App from './App';
 import { Toaster } from 'react-hot-toast';
 import reportWebVitals from './reportWebVitals';
+import "./i18n";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
-    <Toaster/>
+    <React.Suspense fallback="loading..">
+      <App />
+    </ React.Suspense>
+    <Toaster />
   </React.StrictMode>
 );
 

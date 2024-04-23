@@ -1,5 +1,6 @@
 import React from 'react';
 import Countdown from './Countdown'; // Importing the Countdown component
+import { useTranslation } from 'react-i18next';
 
 /**
  * Represents the OTP section component for user authentication.
@@ -16,6 +17,7 @@ interface otpSectionProps {
 
 const OtpSection: React.FC<otpSectionProps> = ({ minutes, seconds, setShow }: otpSectionProps) => {
     const [otp, setOtp] = React.useState(['', '', '', '']);
+    const { t } = useTranslation(); // Importing the useTranslation hook
 
     /**
      * Handles the change event for OTP input fields.
@@ -51,9 +53,9 @@ const OtpSection: React.FC<otpSectionProps> = ({ minutes, seconds, setShow }: ot
     return (
         <div>
             <div className='flex flex-col items-center'>
-                <p className='text-black'>We have sent you One Time Password to your email</p>
+                <p className='text-black'>{t('forgot_password.otp_sent_msg')}</p>
                 <div className='flex flex-col gap-y-5'>
-                    <p className='text-center font-semibold text-black'>Please Enter OTP</p>
+                    <p className='text-center font-semibold text-black'>{t('forgot_password.otp_request_prompt')}</p>
                     {/* Render Countdown component for displaying timer */}
                     <div className='flex justify-center'>
                         <Countdown minutes={minutes} seconds={seconds} setShow={setShow} />
@@ -70,9 +72,9 @@ const OtpSection: React.FC<otpSectionProps> = ({ minutes, seconds, setShow }: ot
                 }
             </div>
             <div className='flex mt-5 lg:mt-10 justify-center gap-x-5'>
-                <button className='bg-button-gray w-1/2 p-3 rounded-2xl text-black font-semibold'>Resend OTP</button>
+                <button className='bg-button-gray w-1/2 p-3 rounded-2xl text-black font-semibold'>{t('forgot_password.resend_otp_btn')}</button>
                 {/* Button to verify OTP */}
-                <button className='bg-button-bg w-1/2 p-3 rounded-2xl text-white font-semibold' onClick={handleVerifyOTP}>Verify OTP</button>
+                <button className='bg-button-bg w-1/2 p-3 rounded-2xl text-white font-semibold' onClick={handleVerifyOTP}>{t('forgot_password.verify_otp_btn')}</button>
             </div>
         </div>
     );

@@ -1,0 +1,39 @@
+{
+  "login": {
+    "welcome": "Bienvenido de nuevo",
+    "email": "Dirección de correo electrónico",
+    "password": "Contraseña",
+    "remember": "Recuérdame",
+    "forgot_password": "¿Olvidaste tu contraseña?",
+    "question": "¿No tienes una cuenta?",
+    "signup": "Regístrate",
+    "login_btn": "INICIAR SESIÓN"
+  },
+  "new_user": {
+    "title": "Nuevo usuario",
+    "personal_details": "Detalles personales",
+    "first_name": "Nombre",
+    "last_name": "Apellido",
+    "email": "Correo electrónico",
+    "phone_number": "Número de teléfono",
+    "company_details": "Detalles de la empresa",
+    "company_name": "Nombre de la empresa",
+    "job_title": "Título del trabajo",
+    "security": "Seguridad",
+    "password": "Contraseña",
+    "terms_and_conditions": "Aceptar los términos y condiciones del servicio",
+    "cancel": "CANCELAR",
+    "register": "REGISTRARSE",
+    "confirm_password": "Confirmar contraseña"
+  },
+  "forgot_password": {
+    "title": "Olvidar contraseña",
+    "description": "Ingrese su dirección de correo electrónico y le enviaremos un enlace para restablecer su contraseña.",
+    "email": "Correo electrónico",
+    "reset_link_btn": "Enviar enlace de restablecimiento",
+    "otp_sent_msg": "Le hemos enviado una contraseña de un solo uso a su correo electrónico",
+    "otp_request_prompt": "Ingrese OTP",
+    "resend_otp_btn": "Reenviar OTP",
+    "verify_otp_btn": "Verificar OTP"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "login": {
+    "welcome": "Bienvenue de retour",
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "remember": "Se souvenir de moi",
+    "forgot_password": "Mot de passe oublié?",
+    "question": "Vous n'avez pas de compte?",
+    "signup": "S'inscrire",
+    "login_btn": "CONNEXION"
+  },
+  "new_user": {
+    "title": "Nouvel utilisateur",
+    "personal_details": "Détails personnels",
+    "first_name": "Prénom",
+    "last_name": "Nom de famille",
+    "email": "Adresse e-mail",
+    "phone_number": "Numéro de téléphone",
+    "company_details": "Détails de l'entreprise",
+    "company_name": "Nom de l'entreprise",
+    "job_title": "Titre du poste",
+    "security": "Sécurité",
+    "password": "Mot de passe",
+    "terms_and_conditions": "Accepter les conditions générales d'utilisation",
+    "cancel": "ANNULER",
+    "register": "S'INSCRIRE",
+    "confirm_password": "Confirmer le mot de passe"
+  },
+  "forgot_password": {
+    "title": "Mot de passe oublié",
+    "description": "Entrez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+    "email": "Adresse e-mail",
+    "reset_link_btn": "Envoyer le lien de réinitialisation",
+    "otp_sent_msg": "Nous vous avons envoyé un mot de passe à usage unique à votre adresse e-mail",
+    "otp_request_prompt": "Veuillez saisir OTP",
+    "resend_otp_btn": "Renvoyer OTP",
+    "verify_otp_btn": "Vérifier OTP"
+  }
+}

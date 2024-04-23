@@ -3769,6 +3769,13 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
+cross-fetch@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/cross-fetch/-/cross-fetch-4.0.0.tgz"
+  integrity sha512-e4a5N8lVvuLgAWgnCrLr2PP0YyDOTHa9H/Rj54dirp61qXnNq46m82bRhNqIA5VccJtWBvPTFRV3TtvHUKPB1g==
+  dependencies:
+    node-fetch "^2.6.12"
+
 cross-spawn@^7.0.0, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
   resolved "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz"
@@ -5712,6 +5719,27 @@ i18next-browser-languagedetector@^7.2.1:
   dependencies:
     "@babel/runtime" "^7.23.2"
 
+i18next-http-backend@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.npmjs.org/i18next-http-backend/-/i18next-http-backend-2.5.1.tgz"
+  integrity sha512-+rNX1tghdVxdfjfPt0bI1sNg5ahGW9kA7OboG7b4t03Fp69NdDlRIze6yXhIbN8rbHxJ8IP4dzRm/okZ15lkQg==
+  dependencies:
+    cross-fetch "4.0.0"
+
+i18next@^23.11.2, "i18next@>= 23.2.3":
+  version "23.11.2"
+  resolved "https://registry.npmjs.org/i18next/-/i18next-23.11.2.tgz"
+  integrity sha512-qMBm7+qT8jdpmmDw/kQD16VpmkL9BdL+XNAK5MNbNFaf1iQQq35ZbPrSlqmnNPOSUY4m342+c0t0evinF5l7sA==
+  dependencies:
+    "@babel/runtime" "^7.23.2"
+
+i18next-browser-languagedetector@^7.2.1:
+  version "7.2.1"
+  resolved "https://registry.npmjs.org/i18next-browser-languagedetector/-/i18next-browser-languagedetector-7.2.1.tgz"
+  integrity sha512-h/pM34bcH6tbz8WgGXcmWauNpQupCGr25XPp9cZwZInR9XHSjIFDYp1SIok7zSPsTOMxdvuLyu86V+g2Kycnfw==
+  dependencies:
+    "@babel/runtime" "^7.23.2"
+
 i18next@^23.11.2:
   version "23.11.2"
   resolved "https://registry.npmjs.org/i18next/-/i18next-23.11.2.tgz"
@@ -7437,7 +7465,7 @@ node-addon-api@^5.0.0:
   resolved "https://registry.npmjs.org/node-addon-api/-/node-addon-api-5.1.0.tgz"
   integrity sha512-eh0GgfEkpnoWDq+VY8OyvYhFEzBk6jIYbRKdIlyTiAXIVJ8PyBaKb0rp7oDtoddbdoHWhq8wwr+XZ81F1rpNdA==
 
-node-fetch@^2.6.7:
+node-fetch@^2.6.12, node-fetch@^2.6.7:
   version "2.7.0"
   resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.7.0.tgz"
   integrity sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==
@@ -8804,7 +8832,7 @@ react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
-react@^18.2.0:
+react@*, react@^18.0.0, react@^18.2.0, "react@>= 16", "react@>= 16.8.0", react@>=16, react@>=16.8:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==

@@ -22,11 +22,11 @@ const ForgetPassword: React.FC = () => {
             <div className="bg-bggray rounded-xl flex flex-col gap-y-5 w-full lg:w-1/2 p-10">
                 <div className="flex flex-col justify-center items-center">
                     <div className="flex gap-y-3 flex-col items-center">
-                        <h1 className="text-3xl lg:text-4xl font-bold">{t('forget password.forget')}</h1>
+                        <h1 className="text-3xl lg:text-4xl font-bold">{t('forgot_password.title')}</h1>
                         <p className="text-sm text-black w-2/3 text-center font-semibold">
                             {/* Enter your email address and we'll send you a link to reset your
                             password. */}
-                            {t('forget password.forget_text')}
+                            {t('forgot_password.description')}
                         </p>
                         <div>
                             <img src={mailsvg} alt="hello" />
@@ -35,7 +35,7 @@ const ForgetPassword: React.FC = () => {
                 </div>
                 <div className={`flex flex-col gap-y-5 ${showOtp ? "lg:gap-y-5" : "lg:gap-y-12"}`}>
                     <div>
-                        <label className="text-black" htmlFor="email" >{t('forget password.email')}</label>
+                        <label className="text-black" htmlFor="email" >{t('forgot_password.email')}</label>
                         <div className="my-2 w-full">
                             <input type="email" name="email"
                                 className="w-full p-3 rounded-2xl text-black bg-[#EBEBEB] outline-none"

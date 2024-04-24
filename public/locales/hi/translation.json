@@ -9,31 +9,31 @@
     "signup": "साइन अप करें",
     "login_btn": "लॉगिन"
   },
-  "new user": {
-    "newUser": "नया उपयोगकर्ता",
-    "personal": "व्यक्तिगत विवरण",
-    "first": "पहला नाम",
-    "last": "अंतिम नाम",
+  "new_user": {
+    "title": "नया उपयोगकर्ता",
+    "personal_details": "व्यक्तिगत विवरण",
+    "first_name": "पहला नाम",
+    "last_name": "अंतिम नाम",
     "email": "ईमेल",
-    "phone": "फोन नंबर",
-    "company_det": "कंपनी का विवरण",
+    "phone_number": "फोन नंबर",
+    "company_details": "कंपनी का विवरण",
     "company_name": "कंपनी का नाम",
     "job_title": "नौकरी का शीर्षक",
     "security": "सुरक्षा",
     "password": "पासवर्ड",
-    "tnc": "सेवा की नियम और शर्तों को स्वीकार करें",
+    "terms_and_conditions": "सेवा की नियम और शर्तों को स्वीकार करें",
     "cancel": "रद्द करें",
     "register": "रजिस्टर करें",
-    "confirm_pw": "पासवर्ड की पुष्टि करें"
+    "confirm_password": "पासवर्ड की पुष्टि करें"
   },
-  "forget password": {
-    "forget": "पासवर्ड भूल गए",
-    "forget_text": "अपना ईमेल पता दर्ज करें और हम आपको अपना पासवर्ड रीसेट करने का लिंक भेजेंगे।",
+  "forgot_password": {
+    "title": "पासवर्ड भूल गए",
+    "description": "अपना ईमेल पता दर्ज करें और हम आपको अपना पासवर्ड रीसेट करने का लिंक भेजेंगे।",
     "email": "ईमेल",
-    "reset_text": "रीसेट लिंक भेजें",
-    "sent_text": "हमने आपको एक बार का पासवर्ड आपके ईमेल पर भेजा है",
-    "request_otp": "कृपया OTP दर्ज करें",
-    "resend": "OTP पुनः भेजें",
-    "verify": "OTP सत्यापित करें"
+    "reset_link_btn": "रीसेट लिंक भेजें",
+    "otp_sent_msg": "हमने आपको एक बार का पासवर्ड आपके ईमेल पर भेजा है",
+    "otp_request_prompt": "कृपया OTP दर्ज करें",
+    "resend_otp_btn": "OTP पुनः भेजें",
+    "verify_otp_btn": "OTP सत्यापित करें"
   }
 }

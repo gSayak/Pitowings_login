@@ -6,7 +6,8 @@ import ForgetPassword from './components/ForgetPassword/ForgetPassword';
 import Layout from './Layout';
 import Home from './components/Home';
 import PrivateRoute from './utils/PrivateRoutes';
-import Table from './components/Table/Table';
+import {data} from "./components/Table/TableData"
+import TableComponent from './components/Table/TableComponent';
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route path="/signup" element={<NewUser />} />
             <Route path="/forgot" element={<ForgetPassword />} />
-            <Route path='/table' element={< Table />} />
+            <Route path='/table' element={< TableComponent data={data} />} />
             <Route element={<PrivateRoute />}>
               <Route element={<Home />} path='/home' />
             </Route>

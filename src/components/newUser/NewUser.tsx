@@ -54,8 +54,8 @@ const NewUser = () => {
         })
     }
     return (
-        <div>
-            <div className=' w-max mx-auto '>
+        <div className='bg-bggray p-5'>
+            <div className=' w-max mx-auto'>
 
                 <form onSubmit={handleOnSubmit}
                     className='mt-3 md:w-9/12  md:mx-auto md:items-center md:-mx-40 md:justify-center  md:mt-3'>
@@ -71,7 +71,6 @@ const NewUser = () => {
                                     name="firstName"
                                     value={firstName}
                                     onChange={handleOnChange}
-                                    placeholder='Enter your firstname'
                                     style={{
                                         background: "rgba(235, 235, 235, 1)"
 
@@ -89,7 +88,6 @@ const NewUser = () => {
                                     name="lastName"
                                     value={lastName}
                                     onChange={handleOnChange}
-                                    placeholder='Enter your lastname'
                                     style={{
                                         background: "rgba(235, 235, 235, 1)"
 
@@ -109,7 +107,6 @@ const NewUser = () => {
                                     name="email"
                                     value={email}
                                     onChange={handleOnChange}
-                                    placeholder='Enter your email'
                                     style={{
                                         background: "rgba(235, 235, 235, 1)"
 
@@ -129,7 +126,6 @@ const NewUser = () => {
                                     name="phoneNumber"
                                     value={phoneNumber}
                                     onChange={handleOnChange}
-                                    placeholder='Enter your phone Number'
                                     style={{
                                         background: "rgba(235, 235, 235, 1)"
 
@@ -153,7 +149,6 @@ const NewUser = () => {
                                     name="companyName"
                                     value={companyName}
                                     onChange={handleOnChange}
-                                    placeholder='Enter your Company Name'
                                     style={{
                                         background: "rgba(235, 235, 235, 1)"
 
@@ -171,7 +166,6 @@ const NewUser = () => {
                                     name="jobTitle"
                                     value={jobTitle}
                                     onChange={handleOnChange}
-                                    placeholder='Enter your job title'
                                     style={{
                                         background: "rgba(235, 235, 235, 1)"
 
@@ -194,7 +188,6 @@ const NewUser = () => {
                                     name='password'
                                     type={showPassword ? "text" : "password"}
                                     onChange={handleOnChange}
-                                    placeholder='Enter your password'
                                     style={{
                                         background: "rgba(235, 235, 235, 1)"
 
@@ -224,7 +217,6 @@ const NewUser = () => {
                                     name='confrimPassword'
                                     onChange={handleOnChange}
                                     type={showConfirmPassword ? "text" : "password"}
-                                    placeholder='Enter your confirm Password'
                                     style={{
                                         background: "rgba(235, 235, 235, 1)"
 
